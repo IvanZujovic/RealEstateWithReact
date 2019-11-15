@@ -1,0 +1,354 @@
+#content-area{
+width: 100%;
+overflow: auto;
+position: relative;
+
+overflow-y: visible}
+#filter{
+
+  background: $grey;
+  width: 30%;
+  max-width: 300px;
+  display: inline-block;
+  float: left;
+ .inside{
+padding: 20px;
+max-width: 350px;
+ }
+ h4{
+  margin-bottom:30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .9rem;
+
+}
+  select{
+    background: transparent;
+    padding:10px ;
+    font-size:13px;
+    font-weight: 500;
+    color: #1b1b1b;
+    display: block;
+    margin-bottom:30px;
+    width:100%;
+  }
+.filters{
+  .title{
+    font-size:.9rem;
+    display: block;
+    margin-bottom: 1rem;
+    margin-top:1rem;
+    color:$darkGrey;
+    text-transform: capitalize;
+  }
+  input[type="text"]{
+    border-radius: 5px;
+    font-size: 1rem;
+    padding:0.4rem;
+    display: inline-block;
+    width: 45%;
+    margin-right: 2.5%;
+
+  }
+  &.extras{
+  label{
+    position: relative;
+    display: block;
+    padding: 5px 0;
+    width:100%;
+    input[type="checkbox"]{
+      float: right;
+      padding: 5px;
+      width:20px;
+      height: 20px;
+    }
+  }
+}
+}
+}
+
+#listings{
+  width: 70%;
+  float: left;
+  display: inline-block;
+  padding: 15px;
+  background: $offWhite;
+  .search-area{
+    input[type="text"]{
+      width: 70%;
+      background: transparent;
+      color:$lightGrey;
+
+      font-size:2rem;
+      border:none;
+      border-bottom:solid $lightGrey 2px;
+      margin-bottom: 20px;
+    }
+  }
+  .sortby-area{
+    margin-bottom: 20px;
+    .results{
+      font-size: .8rem;
+      color:$darkGrey;
+      display: inline-block;
+
+    }
+    .sort-options{
+      float:right;
+      position: absolute;
+      right: 100px;
+      top: 24px;
+
+      select{
+        font-size:.9rem;
+        font-weight: 400;
+        border:1px solid $lightGrey;
+        padding:20px;
+        display: inline-block;
+        vertical-align: top;
+        margin-right:125px;
+
+
+      }
+      .view{
+        display: inline-block;
+
+        .fas{
+          font-size:1.5rem;
+          margin-right:15px;
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+  .listings-result{
+    margin-bottom:60px;
+
+      .listing{
+        margin-top: 30px;
+
+        background: white;
+        -webkit-box-shadow: 0px 9px 15px 0px rgba(176,176,176,1);
+        -moz-box-shadow: 0px 9px 15px 0px rgba(176,176,176,1);
+        box-shadow: 0px 9px 15px 0px rgba(176,176,176,1);
+        border-radius: 5px;
+
+        .listing-img{
+          color:white;
+          padding:15px;
+          position: relative;
+          background: url(https://media.istockphoto.com/photos/beautiful-luxury-home-exterior-with-green-grass-and-landscaped-yard-picture-id856794670?k=6&m=856794670&s=612x612&w=0&h=gneLQSj2K6CzxU4r7DG_HUjd00ZMiZnYhYW_R0goPZ4=)
+           no-repeat center center ;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          min-height: 210px;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          &:hover{
+            .details{
+              opacity: 1;
+            }
+            .address{
+              opacity: 0;
+            }
+          }
+          .address{
+            position: absolute;
+
+            opacity: 1;
+            transition:all .4s ease-in-out;
+            top:10px;
+            font-size: 1.5rem;
+            text-shadow: 2px 2px #000;
+          }
+
+          .details{
+            transition:all .4s ease-in-out;
+            text-shadow: 1px 1px #000;
+            opacity: 0;
+            padding:35px;
+            position: absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            background: rgba(79,4,229,.8); /* Old browsers */
+            background: -moz-linear-gradient(-45deg, rgba(79,4,229,.8) 0%, rgba(157,28,237,.8) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(-45deg, rgba(79,4,229,.8) 0%,rgba(157,28,237,.8) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(135deg, rgba(79,4,229,.8) 0%,rgba(157,28,237,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          }
+          .user-img{
+            width:45px;
+            height: 45px;
+            position: absolute;
+            left: 10px;
+            border-radius: 50%;
+            border:2px solid white;
+            display: inline-block;
+            // vertical-align: middle;
+          }
+          .user-details{
+            display: inline-block;
+            vertical-align: top;
+            text-transform: capitalize;
+
+
+            .username{
+              color: rgba(255,255,255,1);
+              display: block;
+              font-size: .9rem;
+              font-weight: 300;
+              margin-top: 3px;
+              margin-bottom: 5px;
+
+            }
+            .post-date{
+              color: rgba(255,255,255,.7) ;
+              display: block;
+
+            }
+
+          }
+
+
+          .listing-details{
+            margin-top: 20px;
+           margin-bottom: 10px;
+
+
+           .floor-space{
+            margin-bottom: 15px;
+            span{
+              display: inline-block;
+              font-size: .8rem;
+              font-weight: 300;
+              vertical-align: top;
+              position: relative;
+              top:3px;
+              left:0px;
+
+               }
+            .far{
+              display: inline-block;
+              font-size: 20px;
+              margin-right:15px
+             }
+
+
+           }
+           .bedrooms{
+
+            span{
+              display: inline-block;
+              font-size: .8rem;
+              font-weight: 300;
+              vertical-align: top;
+              position: relative;
+              top:3px;
+              left:0px;
+               }
+            .fas{
+              display: inline-block;
+              font-size: 20px;
+              margin-right:15px
+             }
+           }
+
+
+
+
+
+          }
+        }
+      }
+        .bottom-info{
+          padding: 20px;
+
+          .price{
+              font-size: 1.1rem;
+              display: block;
+            margin-left:25px;
+              margin-bottom: 10px;
+              color: $darkGrey;
+          }
+          .location{
+            font-size: 1.2rem;
+            display: block;
+            color:$lightGrey;
+            text-align: center;
+            line-height: 1.3;
+            .fas{
+              margin-right:10px;
+            }
+          }
+        }
+  }
+}
+
+.view-btn{
+  background:black;
+  padding:8px;
+  font-size: .9rem;
+  border-radius:5px;
+  text-align: center;
+  max-width: 150px;
+  position: absolute;
+  right: 90px ;
+  margin-top: 10px;
+  transition:all .4s ease-in-out;
+  &:hover{
+  cursor: pointer;
+  background:$pink;
+}
+
+}
+.view-btn2{
+  background:black;
+  padding:8px;
+  font-size: .9rem;
+  border-radius:5px;
+  text-align: center;
+  max-width: 150px;
+  right: 90px ;
+  margin-top: 10px;
+  transition:all .4s ease-in-out;
+  &:hover{
+    cursor: pointer;
+    background:$pink;
+  }
+}
+#pagination{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+
+  .pages{
+    background: white;
+    -webkit-box-shadow: 0px 9px 15px 0px rgba(176,176,176,1);
+    -moz-box-shadow: 0px 9px 15px 0px rgba(176,176,176,1);
+    box-shadow: 0px 9px 15px 0px rgba(176,176,176,1);
+    display: inline-block;
+    margin-top: 50px;
+
+    li{
+      display: inline-block;
+      padding:20px 30px;
+      transition: all .4s ease-in-out;
+
+      &.active,
+      &:hover{
+        color:white;
+        font-weight: 700;
+        background:pink;
+        cursor: pointer;
+      }
+    }
+  }
+}
